@@ -5,16 +5,18 @@
  * @help        :: See https://sailsjs.com/docs/concepts/actions
  */
 
-const Articles = require("../models/Articles");
+const { Sails } = require("sails");
+
+// const Articles = require("../models/Articles");
 
 module.exports = {
   list: (req,res)=>{
-      Articles.find().then((err,articles)=>{
+      Articles.find().exec((err,articles)=>{
           if(err){
-              res.send(500,{err:err});
-          }  
-          res.send({articles:articles});
-        //   res.view('articles/articles',{articles:articles});
+              return res.status(500).send({err:err});
+          }
+          sails.log.debug("test string");  
+          return res.json({articles:articles});
       })
   },
   edit:(req,res)=>{

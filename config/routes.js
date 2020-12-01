@@ -20,10 +20,10 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': { view: 'pages/homepage' },
-  '/articles/list':'articles/list',
-  'articles/edit/:id':'articles/edit/',
-  'articles/delete/:id':'articles/delete/',
-  'articles/update/:id':'articles/update/',
+  'GET /articles/list':'ArticlesController.list',
+  'POST /articles/edit/:id':'articles/edit',
+  'POST /articles/delete/:id':'articles/delete',
+  'POST /articles/update/:id':'articles/update',
 
 
   /***************************************************************************
