@@ -15,7 +15,7 @@ module.exports = {
       type:'string'
     }
   },
-  datastore:'mongodb',
+ // datastore:'mongodb',
 
 };
 

@@ -70,6 +70,7 @@ module.exports = {
     *                                                                          *
     ***************************************************************************/
     migrate: 'safe',
+    datastore: 'mongo',
 
     /***************************************************************************
     *                                                                          *
@@ -83,7 +84,12 @@ module.exports = {
     // cascadeOnDestroy: false,
 
   },
-
+  datastores: {
+    mongo: {
+      adapter: require('sails-mongo'),
+      url: process.env.MONGOURL
+    }
+  },
 
 
   /**************************************************************************
