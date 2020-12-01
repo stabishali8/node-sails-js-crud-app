@@ -14,15 +14,15 @@ module.exports.routes = {
   *                                                                          *
   * Make the view located at `views/homepage.ejs` your home page.            *
   *                                                                          *
-  * (Alternatively, remove this and add an `index.html` file in your         *
+  * (Alternatively, remove this and add an `index.html` file in yougit rm -r folder-namer         *
   * `assets` directory)                                                      *
   *                                                                          *
   ***************************************************************************/
 
   '/': { view: 'pages/homepage' },
-  'GET /articles/list':'ArticlesController.list',
-  'POST /articles/edit/:id':'articles/edit',
-  'POST /articles/delete/:id':'articles/delete',
+  'GET /articles/retrieve':'ArticlesController.retrieve',
+  'POST /articles/create/':'articles/create',
+  'POST /articles/delete/:id':'ArticlesController.delete',
   'POST /articles/update/:id':'articles/update',
 
 
